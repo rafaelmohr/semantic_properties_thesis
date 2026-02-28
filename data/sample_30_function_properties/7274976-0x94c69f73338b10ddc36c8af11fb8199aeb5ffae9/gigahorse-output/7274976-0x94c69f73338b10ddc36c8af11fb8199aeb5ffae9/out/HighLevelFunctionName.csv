@@ -1,0 +1,10 @@
+0x0	__function_selector__
+0x82	()
+0x82	fallback()
+0x87	issuedCount()
+0xae	issue(address,uint256)
+0xe1	owner()
+0x11f	allower()
+0x134	issued(address)
+0x176	transferOwnership(address)
+0x1a4	token()

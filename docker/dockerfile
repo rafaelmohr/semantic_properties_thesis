@@ -1,0 +1,43 @@
+# base image
+FROM ubuntu:22.04
+
+# install  dependencies
+RUN apt-get update && apt-get install -y \
+    python3 python3-pip python3-venv virtualenv git \
+    gcc cmake gperf libgmp-dev bison build-essential clang \
+    doxygen flex g++ libffi-dev libffi7 libncurses5-dev libsqlite3-dev \
+    zlib1g-dev libboost-all-dev wget unzip mcpp sqlite genisoimage \
+    curl make pkg-config nano time software-properties-common \
+    && apt-get clean
+
+# create a symlink so 'python' works as 'python3'
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+# install solc
+RUN wget https://github.com/argotorg/solidity/releases/download/v0.8.33/solc-static-linux-arm -O /usr/local/bin/solc \
+    && chmod +x /usr/local/bin/solc
+
+WORKDIR /home
+
+# install souffle 2.4 from source
+RUN git clone --branch 2.4 https://github.com/souffle-lang/souffle
+WORKDIR /home/souffle
+RUN cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr
+RUN cmake --build build --target install
+
+
+WORKDIR /home
+
+# install gigahorse
+RUN git clone https://github.com/nevillegrech/gigahorse-toolchain.git --recursive gigahorse
+WORKDIR /home/gigahorse/souffle-addon
+# a test will fail while running make, ignore this
+RUN make WORD_SIZE=$(souffle --version | sed -n 3p | cut -c12,13) -i
+
+# create an executable in /usr/local/bin (this location should already be in path)
+RUN printf '%s\n' '#!/usr/bin/env bash' '/home/gigahorse/gigahorse.py "$@"' \
+    > /usr/local/bin/gigahorse && \
+    chmod +x /usr/local/bin/gigahorse
+
+# this sets entrypoint of shell when running container
+WORKDIR /home

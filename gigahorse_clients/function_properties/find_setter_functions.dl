@@ -1,0 +1,95 @@
+.decl Setter(f: Function)
+.output Setter
+Setter(f) :-
+    ArrayTypeSetter(f);
+    SimpleSetter(f);
+    MappingSetter(f);
+    ArraySetter(f).
+
+
+.decl ArrayTypeSetter(f: Function)
+.output ArrayTypeSetter
+// this is only a heuristic which simply checks for a CALLDATACOPY from the argument variable
+// this may check too loose and can produce false positives
+ArrayTypeSetter(f) :-
+    IsPublicFunction(f),
+    PublicFunctionArrayArg(f, arg, argIndex),
+    DataFlows(arg, callDataCopyVar),
+    CALLDATACOPY(_, memStart, callDataCopyVar, _),
+    !SetterIllegalOperations(f),
+    StorageStoreCount(f, 1).
+
+
+.decl SimpleSetter(f: Function)
+.output SimpleSetter
+SimpleSetter(f) :-
+    IsPublicFunction(f),
+    PublicFunctionArg(f, arg, argIndex),
+    DataFlows(arg, varToStore),
+    (
+        StorageStore(storeStmt, $TightlyPackedVariable($Constant(_), _, _), $VariableWrite(varToStore));
+        StorageStore(storeStmt, $Variable($Constant(_)), $VariableWrite(varToStore))
+    ),
+
+    StatementInFunction(storeStmt, f),
+    !SetterIllegalOperations(f),
+    StorageStoreCount(f, 1).
+
+
+.decl MappingSetter(f: Function)
+.output MappingSetter
+MappingSetter(f) :-
+    IsPublicFunction(f),
+    PublicFunctionArg(f, arg, argIndex),
+    DataFlows(arg, varToStore),
+    (
+        StorageStore(storeStmt, $Variable($Mapping(_)), $VariableWrite(varToStore));
+        StorageStore(storeStmt, $TightlyPackedVariable($Mapping(_), _, _), $VariableWrite(varToStore))
+    ),
+    StatementInFunction(storeStmt, f),
+    !SetterIllegalOperations(f),
+    StorageStoreCount(f, 1).
+
+
+
+.decl ArraySetter(f: Function)
+.output ArraySetter
+ArraySetter(f) :-
+    IsPublicFunction(f),
+    PublicFunctionArg(f, arg, argIndex),
+    DataFlows(arg, varToStore),
+    (
+        StorageStore(storeStmt, $Variable($Array(_)), $VariableWrite(varToStore));
+        StorageStore(storeStmt, $Variable($StaticArray(_, _)), $VariableWrite(varToStore));
+        StorageStore(storeStmt, $TightlyPackedVariable($Array(_), _, _), $VariableWrite(varToStore));
+        StorageStore(storeStmt, $TightlyPackedVariable($StaticArray(_, _), _, _), $VariableWrite(varToStore))
+    ),
+    StatementInFunction(storeStmt, f),
+    !SetterIllegalOperations(f),
+    StorageStoreCount(f, 1).
+
+
+
+/*
+* HELPER/INTERMEDIATE RELATIONS
+*/
+
+.decl SetterIllegalOperations(f: Function)
+.output SetterIllegalOperations
+SetterIllegalOperations(f) :-
+    FunctionEntry(fEntryBlock),
+    InFunction(fEntryBlock, f),
+    GlobalBlockCanReach(fEntryBlock, illegalBlock),
+
+    SetterIllegalInstruction(illegalStmt),
+    Statement_Block(illegalStmt, illegalBlock).
+
+.decl SetterIllegalInstruction(stmt: Statement)
+.output SetterIllegalInstruction
+SetterIllegalInstruction(stmt) :-
+    CALL(stmt, _, _, _, _, _, _, _, _);
+    CALLCODE(stmt, _, _, _, _, _, _, _, _);
+    DELEGATECALL(stmt, _, _, _, _, _, _, _);
+    STATICCALL(stmt, _, _, _, _, _, _, _);
+    CREATE(stmt, _, _, _, _);
+    CREATE2(stmt, _, _, _, _, _).

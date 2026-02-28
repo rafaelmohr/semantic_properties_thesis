@@ -1,0 +1,78 @@
+[
+    {
+        "func_sig": "decimals()",
+        "func_id": "0x313ce567",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "token()",
+        "func_id": "0xfc0c546a",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "totalValue()",
+        "func_id": "0xd4c3eea0",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "deposit(uint256)",
+        "func_id": "0xb6b55f25",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "withdraw(address,uint256)",
+        "func_id": "0xf3fef3a3",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "updateApproval()",
+        "func_id": "0xf926197e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "vault()",
+        "func_id": "0xfbfa77cf",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "admin()",
+        "func_id": "0xf851a440",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    }
+]

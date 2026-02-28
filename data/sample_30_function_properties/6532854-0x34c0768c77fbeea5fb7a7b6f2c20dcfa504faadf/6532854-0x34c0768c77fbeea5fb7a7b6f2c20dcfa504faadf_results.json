@@ -1,0 +1,226 @@
+[
+    {
+        "func_sig": "renounceOwnership()",
+        "func_id": "0x715018a6",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "transferOwnership(address)",
+        "func_id": "0xf2fde38b",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "totalSupply()",
+        "func_id": "0x18160ddd",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "transfer(address,uint256)",
+        "func_id": "0xa9059cbb",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "allowance(address,address)",
+        "func_id": "0xdd62ed3e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferFrom(address,address,uint256)",
+        "func_id": "0x23b872dd",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approve(address,uint256)",
+        "func_id": "0x095ea7b3",
+        "expected_props": [],
+        "actual_props": [
+            "Setter",
+            "MappingSetter"
+        ]
+    },
+    {
+        "func_sig": "unlockAddressDuringITO(address)",
+        "func_id": "0x2e4dde60",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "lockAddressDuringITO(address)",
+        "func_id": "0x7a983e69",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "setSaleAgent(address)",
+        "func_id": "0x14133a7c",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "mint(address,uint256)",
+        "func_id": "0x40c10f19",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "finishMinting()",
+        "func_id": "0x7d64bcb4",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "registerCallback(address)",
+        "func_id": "0xcf1b037c",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "deregisterCallback(address)",
+        "func_id": "0x4c66326d",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "owner()",
+        "func_id": "0x8da5cb5b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "mintingFinished()",
+        "func_id": "0x05d2035b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "saleAgent()",
+        "func_id": "0xb1d6a2f0",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "unlockedAddressesDuringITO(address)",
+        "func_id": "0xdb0d7a38",
+        "expected_props": [
+            "ReturnSize1",
+            "MappingGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "tokenHolders(uint256)",
+        "func_id": "0x923108d9",
+        "expected_props": [
+            "ArrayGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "registeredCallbacks(address)",
+        "func_id": "0xf308846f",
+        "expected_props": [
+            "ReturnSize1",
+            "MappingGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize1"
+        ]
+    }
+]

@@ -1,0 +1,126 @@
+[
+    {
+        "func_sig": "setAssetDeprecated(address,bool)",
+        "func_id": "0x5e70843b",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "setPositionSpenderAddresses(address[])",
+        "func_id": "0x5fea577f",
+        "expected_props": [
+            "ArrayTypeSetter",
+            "Setter"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "setRegistryAddress(address)",
+        "func_id": "0xab7b4993",
+        "expected_props": [
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getPositionSpenderAddresses()",
+        "func_id": "0xcf5f86bd",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "generatorInfo()",
+        "func_id": "0x9daf0359",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "assetsLength()",
+        "func_id": "0xf50477a2",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "assetsAddresses()",
+        "func_id": "0xa31091c7",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "managementList()",
+        "func_id": "0x58443a3b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "assetDeprecated(address)",
+        "func_id": "0x7a0e558b",
+        "expected_props": [
+            "ReturnSize1",
+            "MappingGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "numberOfDeprecatedAssets()",
+        "func_id": "0xda35bc69",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "positionSpenderAddresses(uint256)",
+        "func_id": "0x14e027de",
+        "expected_props": [
+            "ArrayGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "registry()",
+        "func_id": "0x7b103999",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "func_sig": "iSucceed()",
+        "func_id": "0x15278be9",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "iFail()",
+        "func_id": "0x1c2746e9",
+        "expected_props": [],
+        "actual_props": []
+    }
+]

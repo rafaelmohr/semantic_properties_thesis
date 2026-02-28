@@ -1,0 +1,518 @@
+[
+    {
+        "func_sig": "totalSupply()",
+        "func_id": "0x18160ddd",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transfer(address,uint256)",
+        "func_id": "0xa9059cbb",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "allowance(address,address)",
+        "func_id": "0xdd62ed3e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approve(address,uint256)",
+        "func_id": "0x095ea7b3",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferFrom(address,address,uint256)",
+        "func_id": "0x23b872dd",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "owner()",
+        "func_id": "0x8da5cb5b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "transferOwnership(address)",
+        "func_id": "0xf2fde38b",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "getUnlockTime()",
+        "func_id": "0x602bc62b",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "getTime()",
+        "func_id": "0x557ed1ba",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "lock(uint256)",
+        "func_id": "0xdd467064",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "unlock()",
+        "func_id": "0xa69df4b5",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "name()",
+        "func_id": "0x06fdde03",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "symbol()",
+        "func_id": "0x95d89b41",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "decimals()",
+        "func_id": "0x313ce567",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "enableTrading()",
+        "func_id": "0x8a8c523c",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "initContract()",
+        "func_id": "0x8203f5fe",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "increaseAllowance(address,uint256)",
+        "func_id": "0x39509351",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "decreaseAllowance(address,uint256)",
+        "func_id": "0xa457c2d7",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "isExcludedFromReward(address)",
+        "func_id": "0x88f82020",
+        "expected_props": [
+            "ReturnSize1",
+            "MappingGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "totalFees()",
+        "func_id": "0x13114a9d",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "deliver(uint256)",
+        "func_id": "0x3bd5d173",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "reflectionFromToken(uint256,bool)",
+        "func_id": "0x4549b039",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "tokenFromReflection(uint256)",
+        "func_id": "0x2d838119",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "isRemovedSniper(address)",
+        "func_id": "0x610d5b19",
+        "expected_props": [
+            "ReturnSize1",
+            "MappingGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "isExcludedFromFee(address)",
+        "func_id": "0x5342acb4",
+        "expected_props": [
+            "ReturnSize1",
+            "MappingGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "setOperationsAddress(address)",
+        "func_id": "0x499b8394",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "setBuyBackEnabled(bool)",
+        "func_id": "0x29370cc6",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "setMinTrigger(uint256)",
+        "func_id": "0xa3b855ce",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "setK(uint256)",
+        "func_id": "0x67de8be9",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "setBaseAmount(uint256)",
+        "func_id": "0x224a7c6a",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "setTaxFeePercent(uint256)",
+        "func_id": "0x061c82d0",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "setBaseLiqFeePercent(uint256)",
+        "func_id": "0x7f160346",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "launchTime()",
+        "func_id": "0x790ca413",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "_taxFee()",
+        "func_id": "0x3b124fe7",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "_liquidityFee()",
+        "func_id": "0x6bc87c3a",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "_baseLiqFee()",
+        "func_id": "0x975c0ed3",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "_minTrigger()",
+        "func_id": "0xe2c335db",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "k()",
+        "func_id": "0xb4f40c61",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "_baseAmount()",
+        "func_id": "0x4ddfae4b",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "tradingOpen()",
+        "func_id": "0xffb54a99",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "uniswapV2Router()",
+        "func_id": "0x1694505e",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "uniswapV2Pair()",
+        "func_id": "0x49bd5a5e",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "swapAndLiquifyEnabled()",
+        "func_id": "0x4a74bb02",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "buyBackEnabled()",
+        "func_id": "0x6053a0e3",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    }
+]

@@ -1,0 +1,115 @@
+[
+    {
+        "func_sig": "allowance(address,address)",
+        "func_id": "0xdd62ed3e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approve(address,uint256)",
+        "func_id": "0x095ea7b3",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+        "func_id": "0xd505accf",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize12"
+        ]
+    },
+    {
+        "func_sig": "transfer(address,uint256)",
+        "func_id": "0xa9059cbb",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferFrom(address,address,uint256)",
+        "func_id": "0x23b872dd",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "delegate(address)",
+        "func_id": "0x5c19a95c",
+        "expected_props": [],
+        "actual_props": [
+            "Setter",
+            "MappingSetter"
+        ]
+    },
+    {
+        "func_sig": "delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32)",
+        "func_id": "0xc3cda520",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getCurrentVotes(address)",
+        "func_id": "0xb4b5ea57",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getPriorVotes(address,uint256)",
+        "func_id": "0x782d6fe1",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "delegates(address)",
+        "func_id": "0x587cde1e",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "numCheckpoints(address)",
+        "func_id": "0x6fcfff45",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize4"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize4"
+        ]
+    },
+    {
+        "func_sig": "nonces(address)",
+        "func_id": "0x7ecebe00",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    }
+]

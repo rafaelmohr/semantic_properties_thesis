@@ -1,0 +1,7 @@
+0x6d8	$Variable($Mapping($Mapping($Constant(0x2))))	$VariableWrite(0x17f)
+0x8f5	$Variable($Mapping($Constant(0x1)))	$VariableWrite(0x8b2_0x0)
+0x98a	$Variable($Mapping($Constant(0x1)))	$VariableWrite(0x947_0x0)
+0xa99	$Variable($Mapping($Mapping($Constant(0x2))))	$VariableWrite(0xa19_0x0)
+0xd29	$Variable($Mapping($Constant(0x1)))	$VariableWrite(0xce6_0x0)
+0xdbe	$Variable($Mapping($Constant(0x1)))	$VariableWrite(0xd7b_0x0)
+0xf45	$Variable($Mapping($Mapping($Constant(0x2))))	$VariableWrite(0x43c)

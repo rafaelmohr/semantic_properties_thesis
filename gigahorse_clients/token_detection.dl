@@ -1,0 +1,126 @@
+#include "/home/gigahorse/clientlib/decompiler_imports.dl"
+
+#include "/home/gigahorse/clientlib/guards.dl"
+#include "/home/gigahorse/clientlib/loops_semantics.dl"
+
+#include "/home/gigahorse/clientlib/memory_modeling/memory_modeling.dl"
+#include "/home/gigahorse/clientlib/storage_modeling/storage_modeling.dl"
+
+
+.decl StatementInFunction(statement: Statement, f: Function)
+StatementInFunction(statement, f) :-
+    Statement_Block(statement, sb), 
+    InFunction(sb, f).
+
+.decl TransferFunction(f: Function, balancesMappingBaseIndex: Value)
+.output TransferFunction
+TransferFunction(f, balancesMappingBaseIndex) :-
+    IsPublicFunction(f),
+    PublicFunctionArg(f, toArg, toIdx),
+    PublicFunctionArg(f, valueArg, valueIdx),
+    toIdx != valueIdx,
+
+    // FIRST STEP: is balance of sender decreased by value argument
+
+    // check if balance of CALLER gets loaded
+    // the same mapping index needs to be used throughout the function
+    CALLER(callerStmt, callerVar),
+    DataFlowsInclMem(callerVar, senderAddressVar),
+    Variable_StorageIndex(senderBalanceMappingAccessVar, $MappingAccessIndex($ConstantIndex(balancesMappingBaseIndex), senderAddressVar)),
+    SLOAD(senderBalanceLoadStmt, senderBalanceMappingAccessVar, senderLoadedBalance),
+
+    // find decrease of loaded Variable by value argument
+    // this might happen in a "private function", therefore use DataFlows instead of LocalFlows
+    DataFlowsInclMem(senderLoadedBalance, varToDecrease),
+    DataFlowsInclMem(valueArg, decreaseValueVar),
+    SUB(subStmt, varToDecrease, decreaseValueVar, subResultVar),
+
+    // check if decreased value gets stored again
+    CALLER(callerStmt2, callerVar2),
+    DataFlowsInclMem(callerVar2, senderAddressVar2),
+    Variable_StorageIndex(senderBalanceMappingAccessVar2, $MappingAccessIndex($ConstantIndex(balancesMappingBaseIndex), senderAddressVar2)),
+    DataFlowsInclMem(subResultVar, senderStoredVar),
+    SSTORE(senderSSTOREStmt, senderBalanceMappingAccessVar2, senderStoredVar),
+
+
+    // SECOND STEP: is balance of recipient increased by value argument
+
+    // check if balance of recipient gets loaded
+    DataFlowsInclMem(toArg, toAddressVar),
+    Variable_StorageIndex(toMappingAccessVar, $MappingAccessIndex($ConstantIndex(balancesMappingBaseIndex), toAddressVar)),
+    SLOAD(toSloadStmt, toMappingAccessVar, toLoadedBalance),
+
+    // find increase of loaded Variable by value argument
+    DataFlowsInclMem(toLoadedBalance, varToIncrease),
+    DataFlowsInclMem(valueArg, increaseValueVar),
+    ADD(addStmt, varToIncrease, increaseValueVar, addResultVar),
+
+    // check if increased balance of recipient is stored again
+    DataFlowsInclMem(toArg, toAddressVar2),
+    Variable_StorageIndex(toMappingAccessVar2, $MappingAccessIndex($ConstantIndex(balancesMappingBaseIndex), toAddressVar2)),
+    DataFlowsInclMem(addResultVar, toStoredVar),
+    SSTORE(toSSTOREStmt, toMappingAccessVar2, toStoredVar).
+
+
+
+.decl AddressVariable(var: Variable)
+AddressVariable(var) :-
+  LowBytesMaskOp(_, var, 20),
+  !Variable_Value(var, _).  // exclude constants
+.output AddressVariable
+
+
+
+.decl BalanceFunction(f: Function, balancesMappingBaseIndex: Value)
+.output BalanceFunction
+BalanceFunction(f, balancesMappingBaseIndex) :-
+    IsPublicFunction(f),
+    PublicFunctionArg(f, addressArg, argIdx),
+    DataFlowsInclMem(addressArg, addressVar),
+
+    // chech for storage load of balances mapping
+    Variable_StorageIndex(balancesMappingAccessVar, $MappingAccessIndex($ConstantIndex(balancesMappingBaseIndex), addressVar)),
+    SLOAD(toSloadStmt, balancesMappingAccessVar, loadedBalance),
+
+    // check if loaded var gets returned
+    DataFlowsInclMem(loadedBalance, mstoreVar),
+    MSTORE(mstoreStmt, mstoreIndex, mstoreVar),
+
+    MemWriteToMemConsStmt(mstoreStmt, memconsStmt),
+    RETURN(memconsStmt, returnStart, returnLength),
+    StatementInFunction(memconsStmt, f).
+
+
+.decl TokenContract(balancesMappingBaseIndex: Value, balanceFunction: Function, transferFunction: Function)
+.output TokenContract
+TokenContract(balancesMappingIndex, balanceFunction, transferFunction) :-
+    BalanceFunction(balanceFunction, balancesMappingIndex),
+    TransferFunction(transferFunction, balancesMappingIndex).
+
+
+// Data-flow relation which combines data propagation through stack operations and through memory
+.decl DataFlowsInclMem(from: Variable, to: Variable)
+.output DataFlowsInclMem
+DataFlowsInclMem(from, to) :-
+    DataFlows(from, to).
+
+DataFlowsInclMem(from, to) :-
+    MemWriteToMemConsStmt(mWriteStmt, mConsStmt),
+    Statement_Uses(mWriteStmt, from, _),
+    Statement_Defines(mConsStmt, to, _).
+
+// enable transitivity
+DataFlowsInclMem(from, to) :-
+    DataFlowsInclMem(from, intermediate),
+    DataFlowsInclMem(intermediate, to).
+
+
+
+
+
+// debuggin output
+.output SLOAD
+.output SSTORE
+.output Variable_StorageIndex
+.output PublicFunctionArg
+.output PublicFunctionId

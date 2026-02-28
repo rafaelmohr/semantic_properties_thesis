@@ -1,0 +1,389 @@
+[
+    {
+        "func_sig": "name()",
+        "func_id": "0x06fdde03",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "symbol()",
+        "func_id": "0x95d89b41",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "decimals()",
+        "func_id": "0x313ce567",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "totalSupply()",
+        "func_id": "0x18160ddd",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "allowance(address,address)",
+        "func_id": "0xdd62ed3e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approve(address,uint256)",
+        "func_id": "0x095ea7b3",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transfer(address,uint256)",
+        "func_id": "0xa9059cbb",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferFrom(address,address,uint256)",
+        "func_id": "0x23b872dd",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "dollar()",
+        "func_id": "0x51adeb57",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "oracle()",
+        "func_id": "0x7dc0d1d0",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "pool()",
+        "func_id": "0x16f0115b",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "totalBonded()",
+        "func_id": "0x44d96e95",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "totalStaged()",
+        "func_id": "0xcf023779",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "totalDebt()",
+        "func_id": "0xfc7b9c18",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "totalRedeemable()",
+        "func_id": "0x1edbcf6c",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "totalCoupons()",
+        "func_id": "0x9a649edc",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "totalNet()",
+        "func_id": "0xa6c409f1",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "balanceOfStaged(address)",
+        "func_id": "0x86cf9f14",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "balanceOfBonded(address)",
+        "func_id": "0x825ad607",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "balanceOfCoupons(address,uint256)",
+        "func_id": "0xbc7513e2",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "statusOf(address)",
+        "func_id": "0x97a5d5b5",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "allowanceCoupons(address,address)",
+        "func_id": "0x9f6e1b26",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "epoch()",
+        "func_id": "0x900cf0cf",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "epochTime()",
+        "func_id": "0x5053e461",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "outstandingCoupons(uint256)",
+        "func_id": "0xc9aff70c",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "couponsExpiration(uint256)",
+        "func_id": "0x10e95b6c",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "expiringCoupons(uint256)",
+        "func_id": "0x6a39e328",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "expiringCouponsAtIndex(uint256,uint256)",
+        "func_id": "0x4c736099",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "totalBondedAt(uint256)",
+        "func_id": "0xffbe3b73",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "bootstrappingAt(uint256)",
+        "func_id": "0x75d5024b",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "recordedVote(address,address)",
+        "func_id": "0x3fbba9a6",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "startFor(address)",
+        "func_id": "0xf1b7cf49",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "periodFor(address)",
+        "func_id": "0x15e14bf6",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approveFor(address)",
+        "func_id": "0x64668022",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "rejectFor(address)",
+        "func_id": "0x353a420c",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "votesFor(address)",
+        "func_id": "0xa50cd8e7",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "isNominated(address)",
+        "func_id": "0x3a3e6c81",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "isInitialized(address)",
+        "func_id": "0xd60b347f",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "implementation()",
+        "func_id": "0x5c60da1b",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "couponPremium(uint256)",
+        "func_id": "0xd8f54138",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "purchaseCoupons(uint256)",
+        "func_id": "0xe5f55c7e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "redeemCoupons(uint256,uint256)",
+        "func_id": "0xd6a9cf08",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approveCoupons(address,uint256)",
+        "func_id": "0x2f7f889e",
+        "expected_props": [],
+        "actual_props": [
+            "Setter",
+            "MappingSetter"
+        ]
+    },
+    {
+        "func_sig": "transferCoupons(address,address,uint256,uint256)",
+        "func_id": "0x005edd37",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "deposit(uint256)",
+        "func_id": "0xb6b55f25",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "withdraw(uint256)",
+        "func_id": "0x2e1a7d4d",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "bond(uint256)",
+        "func_id": "0x9940686e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "unbond(uint256)",
+        "func_id": "0x27de9e32",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "unbondUnderlying(uint256)",
+        "func_id": "0xdf9a2b1c",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "initialize()",
+        "func_id": "0x8129fc1c",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "commit(address)",
+        "func_id": "0x369e8c1d",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "emergencyCommit(address)",
+        "func_id": "0x47c05069",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "advance()",
+        "func_id": "0xea105ac7",
+        "expected_props": [],
+        "actual_props": []
+    }
+]

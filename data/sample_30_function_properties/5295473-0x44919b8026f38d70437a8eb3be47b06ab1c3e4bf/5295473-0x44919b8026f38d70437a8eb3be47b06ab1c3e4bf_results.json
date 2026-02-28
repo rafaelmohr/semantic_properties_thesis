@@ -1,0 +1,26 @@
+[
+    {
+        "func_sig": "enter(bytes32,bytes8)",
+        "func_id": "0x124c32a1",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "assignAll()",
+        "func_id": "0x90ae631d",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "totalEntrants()",
+        "func_id": "0x694463a2",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "maxEntrants()",
+        "func_id": "0x60643652",
+        "expected_props": [],
+        "actual_props": []
+    }
+]

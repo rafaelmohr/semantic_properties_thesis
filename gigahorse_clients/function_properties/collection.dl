@@ -1,0 +1,33 @@
+#include "/home/gigahorse/clientlib/decompiler_imports.dl"
+
+#include "/home/gigahorse/clientlib/guards.dl"
+#include "/home/gigahorse/clientlib/loops_semantics.dl"
+
+#include "/home/gigahorse/clientlib/memory_modeling/memory_modeling.dl"
+#include "/home/gigahorse/clientlib/storage_modeling/storage_modeling.dl"
+
+#include "/home/gigahorse/clientlib/flows.dl"
+
+
+#include "helpers.dl"
+
+#include "find_auth_functions.dl"
+#include "find_getter_functions.dl"
+#include "find_setter_functions.dl"
+
+// use to connect internal representation of functions to public interface
+.output PublicFunctionId
+
+
+
+
+
+// debugging output
+.output SetterIllegalOperations
+.output StorageStore
+.output StorageLoad
+.output UniqueSlotStorageLoadCount
+.output GetterNoViolation
+.output GetterIllegalOperation
+.output FunctionContainsCodeCopy
+.output VarFlowsToReturn

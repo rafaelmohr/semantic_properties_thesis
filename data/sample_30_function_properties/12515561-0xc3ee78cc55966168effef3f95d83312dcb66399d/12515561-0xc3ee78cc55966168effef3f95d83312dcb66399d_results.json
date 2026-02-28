@@ -1,0 +1,28 @@
+[
+    {
+        "func_sig": "store(uint256)",
+        "func_id": "0x6057361d",
+        "expected_props": [
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "number()",
+        "func_id": "0x8381f58a",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    }
+]

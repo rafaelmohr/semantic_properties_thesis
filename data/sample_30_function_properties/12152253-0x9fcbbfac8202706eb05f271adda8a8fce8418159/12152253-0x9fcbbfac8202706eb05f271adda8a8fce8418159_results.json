@@ -1,0 +1,417 @@
+[
+    {
+        "func_sig": "owner()",
+        "func_id": "0x8da5cb5b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "previousOwner()",
+        "func_id": "0x674f220f",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "renounceOwnership()",
+        "func_id": "0x715018a6",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "transferOwnership(address)",
+        "func_id": "0xf2fde38b",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "reclaimOwnership(address)",
+        "func_id": "0xa90fa603",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "totalSupply()",
+        "func_id": "0x18160ddd",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "transfer(address,uint256)",
+        "func_id": "0xa9059cbb",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "allowance(address,address)",
+        "func_id": "0xdd62ed3e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approve(address,uint256)",
+        "func_id": "0x095ea7b3",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferFrom(address,address,uint256)",
+        "func_id": "0x23b872dd",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "name()",
+        "func_id": "0x06fdde03",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "symbol()",
+        "func_id": "0x95d89b41",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "decimals()",
+        "func_id": "0x313ce567",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "increaseAllowance(address,uint256)",
+        "func_id": "0x39509351",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "decreaseAllowance(address,uint256)",
+        "func_id": "0xa457c2d7",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "cap()",
+        "func_id": "0x355274ea",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "lockFromUpdate(uint256)",
+        "func_id": "0xc38533c6",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "lockToUpdate(uint256)",
+        "func_id": "0x0cb285e2",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "unlockedSupply()",
+        "func_id": "0xfd3d27b8",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "lockedSupply()",
+        "func_id": "0xca5c7b91",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "circulatingSupply()",
+        "func_id": "0x9358928b",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "totalLock()",
+        "func_id": "0x3a1aae35",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "mint(address,uint256)",
+        "func_id": "0x40c10f19",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "totalBalanceOf(address)",
+        "func_id": "0x4b0ee02a",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "lockOf(address)",
+        "func_id": "0x5a46d3b5",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "lastUnlockBlock(address)",
+        "func_id": "0x89a2867c",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "lock(address,uint256)",
+        "func_id": "0x282d3fdf",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "canUnlockAmount(address)",
+        "func_id": "0x202b1760",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "unlock()",
+        "func_id": "0xa69df4b5",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferAll(address)",
+        "func_id": "0xa3a7e7f3",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "delegates(address)",
+        "func_id": "0x587cde1e",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "delegate(address)",
+        "func_id": "0x5c19a95c",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getCurrentVotes(address)",
+        "func_id": "0xb4b5ea57",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getPriorVotes(address,uint256)",
+        "func_id": "0x782d6fe1",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "lockFromBlock()",
+        "func_id": "0x66fc237b",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "lockToBlock()",
+        "func_id": "0x8e875e1a",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "numCheckpoints(address)",
+        "func_id": "0x6fcfff45",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize4"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize4"
+        ]
+    },
+    {
+        "func_sig": "nonces(address)",
+        "func_id": "0x7ecebe00",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    }
+]

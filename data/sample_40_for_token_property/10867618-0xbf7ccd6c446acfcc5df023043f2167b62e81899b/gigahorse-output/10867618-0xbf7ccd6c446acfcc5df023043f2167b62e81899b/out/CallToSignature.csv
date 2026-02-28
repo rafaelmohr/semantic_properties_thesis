@@ -1,0 +1,8 @@
+0x163	getPricePerFullShare()
+0xebb	totalSupply()
+0x3987	totalSupply()
+0x3b8b	transfer(address,uint256)
+0x3bf7	burnFrom(address,uint256)
+0x3cdf	totalSupply()
+0x4887	balanceOf(address)
+0x491d	transfer(address,uint256)

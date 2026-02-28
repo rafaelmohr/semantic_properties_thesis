@@ -1,0 +1,6 @@
+0x2a1	$TightlyPackedVariable($Mapping($Constant(0x3)), 0, 0)	$ConstantWrite(0x1)
+0x2b2	$TightlyPackedVariable($Mapping($Constant(0x3)), 0, 0)	$ConstantWrite(0x1)
+0x2c7	$TightlyPackedVariable($Mapping($Constant(0x5)), 0, 0)	$ConstantWrite(0x1)
+0x308	$TightlyPackedVariable($Array($Constant(0x1)), 0, 19)	$VariableWrite(0x2fc)
+0x573	$TightlyPackedVariable($Constant(0x2), 0, 0)	$VariableWrite(0x55e_0x0)
+0x587	$TightlyPackedVariable($Constant(0x0), 0, 0)	$ConstantWrite(0x0)

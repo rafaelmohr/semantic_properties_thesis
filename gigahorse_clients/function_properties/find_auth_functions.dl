@@ -1,0 +1,43 @@
+#include "/home/gigahorse/clientlib/decompiler_imports.dl"
+
+#include "/home/gigahorse/clientlib/guards.dl"
+#include "/home/gigahorse/clientlib/loops_semantics.dl"
+
+#include "/home/gigahorse/clientlib/memory_modeling/memory_modeling.dl"
+#include "/home/gigahorse/clientlib/storage_modeling/storage_modeling.dl"
+
+
+.decl AuthFunction(f: Function)
+.output AuthFunction
+AuthFunction(f) :-
+    IsPublicFunction(f),
+
+    FunctionEntry(functionEntryBlock),
+    InFunction(functionEntryBlock, f),
+
+    CALLER(callerStmt, callerVar),
+    DataFlows(callerVar, compareVar),
+
+    (
+        EQ(compareStmt, compareVar, compareToVar, compareResult);
+        SUB(compareStmt, compareVar, compareToVar, compareResult)
+    ),
+
+    ControlsWith(controlsStmt, controlledBlock, compareResult),
+    Statement_Block(controlsStmt, comparisonBlock),
+
+    (
+        LocalBlockCanReach(functionEntryBlock, comparisonBlock);
+        (
+            // model the control flow to a private function which does the authentication
+            LocalBlockCanReach(functionEntryBlock, privateCallBlock),
+            Statement_Block(callPrivateStmt, privateCallBlock),
+            CALLPRIVATE(callPrivateStmt, _),
+            GlobalBlockEdge(privateCallBlock, privateFuncEntryBlock),
+            FunctionEntry(privateFuncEntryBlock),
+            InFunction(privateFuncEntryBlock, privateFunc),
+            LocalBlockCanReach(privateFuncEntryBlock, comparisonBlock)
+        )
+    ),
+
+    ThrowBlock(controlledBlock).

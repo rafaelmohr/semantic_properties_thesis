@@ -1,0 +1,92 @@
+[
+    {
+        "func_sig": "getCreator()",
+        "func_id": "0x0ee2cb10",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "getTotalBalance()",
+        "func_id": "0x12b58349",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "check_result(string,string)",
+        "func_id": "0x22400b78",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "resetGame()",
+        "func_id": "0xbb472219",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "substring(string,uint256,uint256)",
+        "func_id": "0x1dcd9b55",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "addressToString(address)",
+        "func_id": "0x5e57966d",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "blockhashToString(bytes32)",
+        "func_id": "0x9455a11e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "isEntity(address)",
+        "func_id": "0x14887c58",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "totalwin()",
+        "func_id": "0xf2e68fbb",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "entityStructs(address)",
+        "func_id": "0x4dd448bf",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "entityList(uint256)",
+        "func_id": "0x404cbffb",
+        "expected_props": [
+            "ArrayGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayGetter",
+            "ReturnSize20"
+        ]
+    }
+]

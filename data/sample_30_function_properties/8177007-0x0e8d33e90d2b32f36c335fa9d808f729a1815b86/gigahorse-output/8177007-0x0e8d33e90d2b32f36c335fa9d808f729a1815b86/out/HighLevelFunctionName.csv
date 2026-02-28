@@ -1,0 +1,6 @@
+0x0	__function_selector__
+0x57	()
+0x57	fallback()
+0x250	swapaddress()
+0x2a7	balanceOf(address)
+0x2fe	check(address)

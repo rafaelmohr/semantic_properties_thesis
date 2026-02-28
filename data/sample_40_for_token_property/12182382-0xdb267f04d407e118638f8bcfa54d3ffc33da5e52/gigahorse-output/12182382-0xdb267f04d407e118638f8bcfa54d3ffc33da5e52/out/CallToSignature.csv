@@ -1,0 +1,7 @@
+0x361	balanceOf(address)
+0x447	balanceOf(address)
+0x6a9	mintPaper(address,uint256)
+0x7ad	mintPaper(address,uint256)
+0x94a	addLiquidityETH(address,uint256,uint256,uint256,address,uint256)
+0xd82	balanceOf(address)
+0xe10	transfer(address,uint256)

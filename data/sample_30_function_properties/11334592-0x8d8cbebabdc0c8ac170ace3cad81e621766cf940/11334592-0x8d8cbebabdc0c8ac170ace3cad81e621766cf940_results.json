@@ -1,0 +1,26 @@
+[
+    {
+        "func_sig": "getTokenControlInfo(address)",
+        "func_id": "0xe7d4fd91",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getTokenImbalanceData(address)",
+        "func_id": "0x03ff4a55",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getRatesCompactData(address)",
+        "func_id": "0xdc03ee69",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getStepFunctionData(address)",
+        "func_id": "0x35f58739",
+        "expected_props": [],
+        "actual_props": []
+    }
+]

@@ -1,0 +1,6 @@
+0x19d	balanceOf(address)
+0x232	transfer(address,uint256)
+0x51a	balanceOf(address)
+0x581	transfer(address,uint256)
+0x612	balanceOf(address)
+0x6e2	balanceOf(address)

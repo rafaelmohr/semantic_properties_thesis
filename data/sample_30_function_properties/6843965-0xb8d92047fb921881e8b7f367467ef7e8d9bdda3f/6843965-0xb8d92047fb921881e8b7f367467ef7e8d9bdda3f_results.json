@@ -1,0 +1,109 @@
+[
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "transfer(address,uint256)",
+        "func_id": "0xa9059cbb",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferFrom(address,address,uint256)",
+        "func_id": "0x23b872dd",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approve(address,uint256)",
+        "func_id": "0x095ea7b3",
+        "expected_props": [],
+        "actual_props": [
+            "Setter",
+            "MappingSetter"
+        ]
+    },
+    {
+        "func_sig": "allowance(address,address)",
+        "func_id": "0xdd62ed3e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "totalSupply()",
+        "func_id": "0x18160ddd",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "name()",
+        "func_id": "0x06fdde03",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "symbol()",
+        "func_id": "0x95d89b41",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "decimals()",
+        "func_id": "0x313ce567",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "INITIAL_SUPPLY()",
+        "func_id": "0x2ff2e9dc",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    }
+]

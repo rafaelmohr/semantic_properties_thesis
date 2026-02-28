@@ -1,0 +1,51 @@
+#include "/home/gigahorse/clientlib/decompiler_imports.dl"
+
+#include "/home/gigahorse/clientlib/guards.dl"
+#include "/home/gigahorse/clientlib/loops_semantics.dl"
+
+#include "/home/gigahorse/clientlib/memory_modeling/memory_modeling.dl"
+#include "/home/gigahorse/clientlib/storage_modeling/storage_modeling.dl"
+
+#include "/home/gigahorse/clientlib/flows.dl"
+
+
+// this file contains helper relations needed in several of the other files
+
+
+.decl StatementInFunction(statement: Statement, f: Function)
+StatementInFunction(statement, f) :-
+    Statement_Block(statement, sb), 
+    InFunction(sb, f).
+
+
+.decl StorageStoreCount(f: Function, c: number)
+.output StorageStoreCount
+StorageStoreCount(f, c) :-
+    IsFunction(f),
+    c = count: {
+        StorageStoreWithF(f, _)
+    }.
+
+.decl StorageStoreWithF(f: Function, storeStmt: Statement)
+.output StorageStoreWithF
+StorageStoreWithF(f, stmt) :-
+    IsFunction(f),
+    StorageStore(stmt, _, _),
+    StatementInFunction(stmt, f).
+
+
+
+.decl UniqueSlotStorageLoadCount(f: Function, c: number)
+.output UniqueSlotStorageLoadCount
+UniqueSlotStorageLoadCount(f, c) :-
+    IsFunction(f),
+    c = count: {
+        StorageLoadWithF(f, storCons)
+    }.
+
+.decl StorageLoadWithF(f: Function, storCons: StorageConstruct)
+.output StorageLoadWithF
+StorageLoadWithF(f, storCons) :-
+    IsFunction(f),
+    StorageLoad(stmt, storCons, _),
+    StatementInFunction(stmt, f).

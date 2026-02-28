@@ -1,0 +1,50 @@
+[
+    {
+        "func_sig": "coinJoin_join(address,address,uint256)",
+        "func_id": "0x1c005fda",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "claimProxyFunds(address)",
+        "func_id": "0x1355c7b7",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "claimProxyFunds(address[])",
+        "func_id": "0x9206d09f",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "startAndDecreaseSoldAmount(address,address,uint256)",
+        "func_id": "0xfde72a92",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "decreaseSoldAmount(address,address,uint256,uint256)",
+        "func_id": "0xc576355a",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "settleAuction(address,address,uint256)",
+        "func_id": "0xfdbc9820",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "exitCoin(address,uint256)",
+        "func_id": "0x8224f93e",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "exitAllCoin(address)",
+        "func_id": "0xd42a925e",
+        "expected_props": [],
+        "actual_props": []
+    }
+]

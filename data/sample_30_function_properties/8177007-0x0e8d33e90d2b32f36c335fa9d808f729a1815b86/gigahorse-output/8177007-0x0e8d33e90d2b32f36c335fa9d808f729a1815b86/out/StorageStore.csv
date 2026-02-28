@@ -1,0 +1,2 @@
+0x115	$Variable($Mapping($Constant(0x1)))	$VariableWrite(0x10f)
+0x24d	$TightlyPackedVariable($Mapping($Constant(0x2)), 0, 0)	$VariableWrite(0x1f7)

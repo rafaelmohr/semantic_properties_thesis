@@ -1,0 +1,4 @@
+$TightlyPackedVariable($Constant(0x1), 20, 20)	0x10c
+$TightlyPackedVariable($Constant(0x8), 0, 0)	0x295
+$TightlyPackedVariable($Constant(0x8), 0, 0)	0x298
+$TightlyPackedVariable($Mapping($Constant(0x9)), 0, 0)	0x10e

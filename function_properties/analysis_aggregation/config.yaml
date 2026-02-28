@@ -1,0 +1,32 @@
+relative_gigahorse_output_dir: "gigahorse-output/<contract_name>/out"
+analyses:
+  - name: Authenticated
+    relation_name: AuthFunction
+
+
+  - name: Getter
+    relation_name: Getter
+  - name: SimpleGetter
+    relation_name: SimpleGetter
+  - name: ArrayGetter
+    relation_name: ArrayGetter
+  - name: MappingGetter
+    relation_name: MappingGetter
+  - name: ArrayTypeGetter
+    relation_name: ArrayTypeGetter
+
+  - name: ReturnSize
+    relation_name: GetterSizeInBytes
+    parametric: true
+
+
+  - name: Setter
+    relation_name: Setter
+  - name: SimpleSetter
+    relation_name: SimpleSetter
+  - name: ArraySetter
+    relation_name: ArraySetter
+  - name: MappingSetter
+    relation_name: MappingSetter
+  - name: ArrayTypeSetter
+    relation_name: ArrayTypeSetter

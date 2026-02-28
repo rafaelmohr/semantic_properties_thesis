@@ -1,0 +1,3 @@
+0x3ae	getMembershipStatus(address)
+0x45f	getMemberInformation(uint8)
+0x547	newMember(uint8,bytes32,address)

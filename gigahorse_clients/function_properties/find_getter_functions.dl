@@ -1,0 +1,184 @@
+.decl Getter(f: Function)
+.output Getter
+Getter(f) :-
+    SimpleGetter(f);
+    MappingGetter(f);
+    ArrayGetter(f);
+    ArrayTypeGetter(f).
+
+
+// SIMPLE GETTER
+.decl SimpleGetter(f: Function)
+.output SimpleGetter
+SimpleGetter(f) :-
+    SimpleGetterFullWord(f);
+    SimpleGetterPacked(f, _).
+
+
+.decl SimpleGetterFullWord(f: Function)
+.output SimpleGetterFullWord
+SimpleGetterFullWord(f) :-
+    IsPublicFunction(f),
+    StorageLoad(loadStmt, $Variable($Constant(slot)), loadedVar),
+    StatementInFunction(loadStmt, f),
+    VarFlowsToReturn(f, loadedVar),
+    GetterNoViolation(f).
+
+
+.decl SimpleGetterPacked(f: Function, sizeBytes: number)
+.output SimpleGetterPacked
+SimpleGetterPacked(f, high - low + 1) :-
+    IsPublicFunction(f),
+    StorageLoad(loadStmt, $TightlyPackedVariable($Constant(slot), low, high), loadedVar),
+    StatementInFunction(loadStmt, f),
+    VarFlowsToReturn(f, loadedVar),
+    GetterNoViolation(f).
+
+
+
+// MAPPING GETTER
+.decl MappingGetter(f: Function)
+.output MappingGetter
+MappingGetter(f) :-
+    MappingGetterFullWord(f);
+    MappingGetterPacked(f, _).
+
+
+.decl MappingGetterFullWord(f: Function)
+.output MappingGetterFullWord
+MappingGetterFullWord(f) :-
+    IsPublicFunction(f),
+    StorageLoad(loadStmt, $Variable($Mapping($Constant(slot))), loadedVar),
+    StatementInFunction(loadStmt, f),
+    VarFlowsToReturn(f, loadedVar),
+    GetterNoViolation(f).
+
+
+.decl MappingGetterPacked(f: Function, sizeBytes: number)
+.output MappingGetterPacked
+MappingGetterPacked(f, high - low + 1) :-
+    IsPublicFunction(f),
+    StorageLoad(loadStmt, $TightlyPackedVariable($Mapping($Constant(slot)), low, high), loadedVar),
+    StatementInFunction(loadStmt, f),
+    VarFlowsToReturn(f, loadedVar),
+    GetterNoViolation(f).
+
+
+
+
+// ARRAY GETTER
+.decl ArrayGetter(f: Function)
+.output ArrayGetter
+ArrayGetter(f) :-
+    ArrayGetterFullWord(f);
+    ArrayGetterPacked(f, _).
+
+.decl ArrayGetterFullWord(f: Function)
+.output ArrayGetterFullWord
+ArrayGetterFullWord(f) :-
+    IsPublicFunction(f),
+    StorageLoad(loadStmt, $Variable($Array($Constant(slot))), loadedVar),
+    StatementInFunction(loadStmt, f),
+    VarFlowsToReturn(f, loadedVar),
+    GetterNoViolation(f).
+
+
+.decl ArrayGetterPacked(f: Function, sizeBytes: number)
+.output ArrayGetterPacked
+ArrayGetterPacked(f, high - low + 1) :-
+    IsPublicFunction(f),
+    StorageLoad(loadStmt, $TightlyPackedVariable($Array($Constant(slot)), low, high), loadedVar),
+    StatementInFunction(loadStmt, f),
+    VarFlowsToReturn(f, loadedVar),
+    GetterNoViolation(f).
+
+
+
+// RETURN SIZE
+.decl GetterSizeInBytes(f: Function, sizeBytes: number)
+.output GetterSizeInBytes
+GetterSizeInBytes(f, 32) :-
+    SimpleGetterFullWord(f);
+    MappingGetterFullWord(f);
+    ArrayGetterFullWord(f).
+
+GetterSizeInBytes(f, sizeBytes) :-
+    SimpleGetterPacked(f, sizeBytes);
+    MappingGetterPacked(f, sizeBytes);
+    ArrayGetterPacked(f, sizeBytes).
+
+
+
+// STRING or ARRAY GETTER
+.decl ArrayTypeGetter(f: Function)
+.output ArrayTypeGetter
+ArrayTypeGetter(f) :-
+    IsPublicFunction(f),
+
+    SLOAD(sloadStmt, storIdx, loadedVar),
+    DataFlows(loadedVar, mStoreVar),
+    MSTORE(mstoreStmt, mStorIdx, mStoreVar),
+
+    MemWriteToMemConsStmt(mstoreStmt, returnStmt),
+
+    // this is a heuristic to prevent detection of function when string constant is returned
+    !FunctionContainsCodeCopy(f),
+
+    StatementUsesMemory_UsesArray(returnStmt, kind, array),
+    (kind = "RETURN"),
+    StatementInFunction(returnStmt, f),
+    GetterNoViolation(f).
+
+
+
+
+
+/**
+*    HELPERS
+*/
+
+.decl VarFlowsToReturn(f: Function, var: Variable)
+VarFlowsToReturn(f, var) :-
+    DataFlows(var, mstoreVar),
+    MSTORE(mstoreStmt, mstoreIndex, mstoreVar),
+    MemWriteToMemConsStmt(mstoreStmt, memconsStmt),
+    RETURN(memConsStmt, returnStart, returnLength),
+    StatementInFunction(memConsStmt, f).
+
+
+
+// getters must not have any storage stores and no other illegal instructions
+.decl GetterNoViolation(f: Function)
+GetterNoViolation(f) :-
+    IsPublicFunction(f),
+    StorageStoreCount(f, 0),
+    // violation is only present if count of StorageLoad is >= 2; ArrayType Getters might not have any StorageLoads
+    UniqueSlotStorageLoadCount(f, c), 
+    (c <= 1),
+    !GetterIllegalOperation(f).
+
+// all operations which potentially alter the state in any way are not permitted for getters
+.decl GetterIllegalOperation(f: Function)
+GetterIllegalOperation(f) :-
+    FunctionEntry(fEntryBlock),
+    InFunction(fEntryBlock, f),
+    LocalBlockCanReach(fEntryBlock, illegalBlock),
+    GetterIllegalInstruction(illegalStmt),
+    Statement_Block(illegalStmt, illegalBlock).
+
+.decl GetterIllegalInstruction(stmt: Statement)
+GetterIllegalInstruction(stmt) :-
+    CALL(stmt, _, _, _, _, _, _, _, _);
+    CALLCODE(stmt, _, _, _, _, _, _, _, _);
+    DELEGATECALL(stmt, _, _, _, _, _, _, _);
+    STATICCALL(stmt, _, _, _, _, _, _, _);
+    CREATE(stmt, _, _, _, _);
+    CREATE2(stmt, _, _, _, _, _).
+
+
+
+.decl FunctionContainsCodeCopy(f: Function)
+FunctionContainsCodeCopy(f) :-
+    IsPublicFunction(f),
+    StatementInFunction(codecopyStmt, f),
+    Statement_Opcode(codecopyStmt, "CODECOPY").

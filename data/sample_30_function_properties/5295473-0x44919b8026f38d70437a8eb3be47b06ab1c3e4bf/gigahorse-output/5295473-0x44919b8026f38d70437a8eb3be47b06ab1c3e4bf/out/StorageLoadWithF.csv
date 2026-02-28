@@ -1,0 +1,6 @@
+0x4d	$TightlyPackedVariable($Mapping($Constant(0x3)), 0, 0)
+0x4d	$TightlyPackedVariable($Mapping($Constant(0x4)), 0, 0)
+0x4d	$TightlyPackedVariable($Mapping($Constant(0x5)), 0, 0)
+0xd1	$TightlyPackedVariable($Constant(0x0), 0, 0)
+0xd1	$TightlyPackedVariable($Constant(0x2), 0, 0)
+0xd1	$TightlyPackedVariable($Array($Constant(0x1)), 0, 19)

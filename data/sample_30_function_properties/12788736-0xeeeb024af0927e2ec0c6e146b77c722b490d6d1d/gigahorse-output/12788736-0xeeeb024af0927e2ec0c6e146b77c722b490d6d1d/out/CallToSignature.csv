@@ -1,0 +1,7 @@
+0xe63	factory()
+0xee3	WETH()
+0xf63	createPair(address,address)
+0x30c4	WETH()
+0x3193	swapExactTokensForETHSupportingFeeOnTransferTokens(uint256,uint256,address[],address,uint256)
+0x3292	WETH()
+0x339f	swapExactETHForTokensSupportingFeeOnTransferTokens(uint256,address[],address,uint256)

@@ -1,0 +1,103 @@
+[
+    {
+        "func_sig": "getImplementation(string)",
+        "func_id": "0x6b683896",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "owner()",
+        "func_id": "0x8da5cb5b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "isOwner()",
+        "func_id": "0x8f32d59b",
+        "expected_props": [],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "renounceOwnership()",
+        "func_id": "0x715018a6",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "transferOwnership(address)",
+        "func_id": "0xf2fde38b",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "freeze()",
+        "func_id": "0x62a5af3b",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "setImplementation(string,address)",
+        "func_id": "0x06419fe5",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "unsetImplementation(string)",
+        "func_id": "0x30b7be29",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": [
+            "Authenticated"
+        ]
+    },
+    {
+        "func_sig": "frozen()",
+        "func_id": "0x054f7d9c",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    }
+]

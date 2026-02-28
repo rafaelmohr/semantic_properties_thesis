@@ -1,0 +1,306 @@
+[
+    {
+        "func_sig": "max(uint256,uint256)",
+        "func_id": "0x6d5433e6",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "min(uint256,uint256)",
+        "func_id": "0x7ae2b5c7",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferOwnership(address)",
+        "func_id": "0xf2fde38b",
+        "expected_props": [
+            "Authenticated",
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "acceptOwnership()",
+        "func_id": "0x79ba5097",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "balances(address)",
+        "func_id": "0x27e235e3",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "investorsCount()",
+        "func_id": "0x2b711051",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "TOTAL_RECEIVED_ETH()",
+        "func_id": "0x47002c6d",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "state()",
+        "func_id": "0xc19d93fb",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "san_whitelist(address)",
+        "func_id": "0x007aa091",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "cfi_whitelist(address)",
+        "func_id": "0x19e82d86",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "refund()",
+        "func_id": "0x590e1ae3",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "withdrawFundsAndStartToken()",
+        "func_id": "0x66bc0d6d",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "mintAllBonuses()",
+        "func_id": "0x3714e274",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "presaleTokenAmount(address)",
+        "func_id": "0x91aaf2e9",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "abort()",
+        "func_id": "0x35a063b4",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "owner()",
+        "func_id": "0x8da5cb5b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "newOwner()",
+        "func_id": "0xd4ee1d90",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "TEAM_GROUP_WALLET()",
+        "func_id": "0xeca0be47",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "ADVISERS_AND_FRIENDS_WALLET()",
+        "func_id": "0x5ed49e9b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "TOKEN()",
+        "func_id": "0x82bfefc8",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "PRIORITY_ADDRESS_LIST()",
+        "func_id": "0xd16865a3",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "COMMUNITY_ALLOWANCE_LIST()",
+        "func_id": "0x3cc71c3f",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "PRESALE_BALANCES()",
+        "func_id": "0x2b0e16bf",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "PRESALE_BONUS_VOTING()",
+        "func_id": "0xad475113",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "isAborted()",
+        "func_id": "0xfe4caa64",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "TOKEN_STARTED()",
+        "func_id": "0x705791f2",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "total_received_amount()",
+        "func_id": "0xbc60878e",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "investors(uint256)",
+        "func_id": "0x3feb5f2b",
+        "expected_props": [
+            "ArrayGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "",
+        "func_id": "0x24a3b013",
+        "expected_props": [],
+        "actual_props": [
+            "Setter",
+            "SimpleSetter"
+        ]
+    }
+]

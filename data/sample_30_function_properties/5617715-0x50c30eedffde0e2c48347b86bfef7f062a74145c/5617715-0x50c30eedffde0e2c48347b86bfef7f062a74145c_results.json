@@ -1,0 +1,76 @@
+[
+    {
+        "func_sig": "buyTokens(address)",
+        "func_id": "0xec8ac4d8",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "_newWallet(address)",
+        "func_id": "0x16cc9022",
+        "expected_props": [
+            "SimpleSetter",
+            "Setter"
+        ],
+        "actual_props": [
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "token()",
+        "func_id": "0xfc0c546a",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "wallet()",
+        "func_id": "0x521eb273",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "rate()",
+        "func_id": "0x2c4e722e",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "weiRaised()",
+        "func_id": "0x4042b66f",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    }
+]

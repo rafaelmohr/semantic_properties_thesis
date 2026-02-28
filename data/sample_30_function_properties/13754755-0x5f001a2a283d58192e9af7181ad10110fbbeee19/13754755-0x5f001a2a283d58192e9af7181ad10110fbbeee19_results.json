@@ -1,0 +1,324 @@
+[
+    {
+        "func_sig": "owner()",
+        "func_id": "0x8da5cb5b",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "renounceOwnership()",
+        "func_id": "0x715018a6",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "transferOwnership(address)",
+        "func_id": "0xf2fde38b",
+        "expected_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ],
+        "actual_props": [
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "supportsInterface(bytes4)",
+        "func_id": "0x01ffc9a7",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "ownerOf(uint256)",
+        "func_id": "0x6352211e",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "approve(address,uint256)",
+        "func_id": "0x095ea7b3",
+        "expected_props": [
+            "MappingSetter",
+            "Setter"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "getApproved(uint256)",
+        "func_id": "0x081812fc",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "setApprovalForAll(address,bool)",
+        "func_id": "0xa22cb465",
+        "expected_props": [],
+        "actual_props": [
+            "Setter",
+            "MappingSetter"
+        ]
+    },
+    {
+        "func_sig": "isApprovedForAll(address,address)",
+        "func_id": "0xe985e9c5",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "name()",
+        "func_id": "0x06fdde03",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "symbol()",
+        "func_id": "0x95d89b41",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "tokenURI(uint256)",
+        "func_id": "0xc87b56dd",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "changeBaseURI(string)",
+        "func_id": "0x39a0c6f9",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Authenticated",
+            "Getter"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "changeUnrevealedURI(string)",
+        "func_id": "0xc4d8b9df",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Authenticated",
+            "Getter"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "isValidAccessMessage(address,uint8,bytes32,bytes32)",
+        "func_id": "0x32624114",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "mint(uint256,uint8,bytes32,bytes32)",
+        "func_id": "0x10aec4a6",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "reservedMintCreator(uint256)",
+        "func_id": "0x5136efb8",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "switchToPresale()",
+        "func_id": "0xeab41782",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "switchToPublicSale()",
+        "func_id": "0xff984994",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "burnTokens()",
+        "func_id": "0x08003f78",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "accountBalance()",
+        "func_id": "0xb0a1c1c4",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "changeDummy(address)",
+        "func_id": "0x0191a657",
+        "expected_props": [
+            "Authenticated",
+            "Setter",
+            "SimpleSetter"
+        ],
+        "actual_props": [
+            "Setter",
+            "SimpleSetter"
+        ]
+    },
+    {
+        "func_sig": "totalSupply()",
+        "func_id": "0x18160ddd",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "reservedMintsCreator()",
+        "func_id": "0xb4561cb0",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "retrieveFunds()",
+        "func_id": "0x61b20d8c",
+        "expected_props": [
+            "Authenticated"
+        ],
+        "actual_props": []
+    },
+    {
+        "func_sig": "tokensLeftPresale()",
+        "func_id": "0x64ef533b",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "saleState()",
+        "func_id": "0x603f4d52",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    },
+    {
+        "func_sig": "mintCost()",
+        "func_id": "0xbdb4b848",
+        "expected_props": [],
+        "actual_props": []
+    },
+    {
+        "func_sig": "unrevealedURI()",
+        "func_id": "0x7035bf18",
+        "expected_props": [
+            "ArrayTypeGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "ArrayTypeGetter"
+        ]
+    },
+    {
+        "func_sig": "maxMint()",
+        "func_id": "0x7501f741",
+        "expected_props": [
+            "SimpleGetter",
+            "ReturnSize32",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "mintsPerAddress(address)",
+        "func_id": "0x3023eba6",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "saleState_()",
+        "func_id": "0xf16e4f84",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize1"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize1"
+        ]
+    }
+]

@@ -1,0 +1,6 @@
+0xded	burn(address,uint256)
+0xf60	mint(address,uint256)
+0x15e3	onERC721Received(address,address,uint256,bytes)
+0x10db0xffdS0x4ba	burn(address,uint256)
+0x10db0x1182S0x4f3	mint(address,uint256)
+0x7f9S0x2eb	mint(address,uint256)

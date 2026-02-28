@@ -1,0 +1,14 @@
+0x0	__function_selector__
+0x98	frozen()
+0xb4	setImplementation(string,address)
+0x167	unsetImplementation(string)
+0x20d	freeze()
+0x215	getImplementation(string)
+0x2d7	renounceOwnership()
+0x2df	owner()
+0x2e7	isOwner()
+0x2ef	transferOwnership(address)
+0x79a	0x79a
+0x7ab	0x7ab
+0x11ec	()
+0x11ec	fallback()

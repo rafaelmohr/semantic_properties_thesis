@@ -1,0 +1,44 @@
+[
+    {
+        "func_sig": "swapaddress()",
+        "func_id": "0x41725ce9",
+        "expected_props": [
+            "SimpleGetter",
+            "Getter",
+            "ReturnSize20"
+        ],
+        "actual_props": [
+            "Getter",
+            "SimpleGetter",
+            "ReturnSize20"
+        ]
+    },
+    {
+        "func_sig": "balanceOf(address)",
+        "func_id": "0x70a08231",
+        "expected_props": [
+            "MappingGetter",
+            "Getter",
+            "ReturnSize32"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize32"
+        ]
+    },
+    {
+        "func_sig": "check(address)",
+        "func_id": "0xc23697a8",
+        "expected_props": [
+            "ReturnSize1",
+            "MappingGetter",
+            "Getter"
+        ],
+        "actual_props": [
+            "Getter",
+            "MappingGetter",
+            "ReturnSize1"
+        ]
+    }
+]
