@@ -1,6 +1,6 @@
 # Source for the master thesis "Semantic Properties in Ethereum Bytecode using Static Analysis"
 
-This repository contains the accompanying files for the master thesis "Semantic Properties in Ethereum Bytecode using Static Analysis".
+This repository contains the accompanying files for the master thesis "[Semantic Properties in Ethereum Bytecode using Static Analysis](http://hdl.handle.net/20.500.12708/227986)"
 
 ## Installation
 
